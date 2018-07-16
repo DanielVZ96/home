@@ -1,0 +1,33 @@
+* {
+    font-family: 'Quattrocento Sans', sans-serif;
+    margin: 0 auto;
+    color: white;
+    background-color: #141615;
+}
+
+
+.header {
+    background-color: transparent;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+
+.header-container {
+    background: url("background.jpg");
+    background-color: inherit;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.header--name {
+}
+
+.main {
+    position: absolute;
+    top: 100%;
+
+}

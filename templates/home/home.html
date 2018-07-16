@@ -1,26 +1,26 @@
-{% load staticfiles %}
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Daniel Valenzuela</title>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'home/home.css' %}">
+     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans|Space+Mono" rel="stylesheet">
 </head>
 <body>
-    <div class="container   ">
-        <header class="header">
+    <header class="header">
+        <div class="header-container">
             <h2 class="header header--name">Daniel Valenzuela</h2>
             <nav class="header header--nav">
-                <div class="header--inner">
                     <a class="header header--nav header__active" href={% url  'home' %}>Inicio</a>
                     <a class="header header--nav header__inactive" href="https://github.com/DanielVZ96/">Github</a>
                     <a class="header header--nav header__inactive" href={% url 'contact' %}>Contacto</a>
-                </div>
             </nav>
-        </header>
-        <main class="main" role="main">
-            <h1 class="main main--heading">Programador</h1>
+        </div>
+    </header>
+    <main class="main" role="main">
+        <h1 class="main main--heading">Programador</h1>
             <div class="main projects">
                 {% for project in projects %}
                 <div class="main projects--project">
@@ -28,7 +28,6 @@
                 </div>
                 {% endfor %}
             </div>
-        </main>
-    </div>
+    </main>
 </body>
 </html>
