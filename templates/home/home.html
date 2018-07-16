@@ -8,25 +8,23 @@
     <link type="text/css" rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
-    <div class="container">
+    <div class="container   ">
         <header class="header">
-            <h2 class="masthead-name">Daniel Valenzuela</h2>
-            <nav class="nav nav-masthead">
-                <div class="inner">
-                    <a class="nav-link active" href={% url  'home' %}>Inicio</a>
-                    <a class="nav-link" href="https://github.com/DanielVZ96/">Github</a>
-                    <a class="nav-link" href={% url 'contact' %}>Contacto</a>
+            <h2 class="header header--name">Daniel Valenzuela</h2>
+            <nav class="header header--nav">
+                <div class="header--inner">
+                    <a class="header header--nav header__active" href={% url  'home' %}>Inicio</a>
+                    <a class="header header--nav header__inactive" href="https://github.com/DanielVZ96/">Github</a>
+                    <a class="header header--nav header__inactive" href={% url 'contact' %}>Contacto</a>
                 </div>
             </nav>
         </header>
-        <main class="inner cover" role="main">
-            <h1 class="cover-heading">Python, Django, y más.</h1>
-            <div class="projects">
+        <main class="main" role="main">
+            <h1 class="main main--heading">Programador</h1>
+            <div class="main projects">
                 {% for project in projects %}
-                <div class="project">
-                    <div class="display-5">
-                        <a href="{{ project.url }}">{{ project.name }}</a>
-                    </div>
+                <div class="main projects--project">
+                    <a href="{{ project.url }}">{{ project.name }}</a>
                 </div>
                 {% endfor %}
             </div>
