@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Daniel Valenzuela</title>
     <link type="text/css" rel="stylesheet" href="{% static 'home/home.css' %}">
-     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans|Space+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<i class="fa fa-angle-down fa-4x"></i>
     <header class="header">
         <div class="header-container">
             <div class="header--name-container">
+                <img src="{% static 'home/daniel.jpeg' %}" class="header-pic">
                 <nav class="header--nav">
-                    <a class="header--nav header__active" href={% url  'home' %}>Inicio</a>
-                    <a class="header--nav header__inactive" href="https://github.com/DanielVZ96/">Github</a>
-                    <a class="header--nav header__inactive" href={% url 'contact' %}>Contacto</a>
+                    <a class="header--nav header--nav-link" href="https://github.com/DanielVZ96/">Github</a>
+                    <!-- <a class="header--nav header--nav-link" href={% url 'contact' %}>Contacto</a> -->
                 </nav>
                 <h1 class="header--name">Daniel Valenzuela</h1>
             </div>
@@ -23,14 +25,43 @@
     </header>
     <main class="main" role="main">
         <h1 class="main main--heading">Desarrollador Python</h1>
-        <div class="main main--about-me"
-            <div class="main projects">
-                {% for project in projects %}
-                <div class="main projects--project">
+        <div class="main main--about-me">
+            <h1 class=" main main--about-me main--about-me-h">Sobre mí:</h1>
+            <p class="main main--about-me main--about-me-p">
+                Soy tanto programador como estudiante y casi licenciado en
+                Historia. Llevo alrededor de dos años aprendiendo programación y aún sigo aprendiendo día a día. Empecé
+                a programar después de probar la experiencia en un videojuego. Caí inmediatamente en la cuenta de que soy un adicto a resolver problemas
+                por medio de algoritmos. A lo largo de este tiempo he aprendido que, con perseverancia, es posible crear
+                o solucionar lo que sea. Creo que la informática todavía tiene mucho que dar al mundo y quiero ser parte de eso.
+            </p>
+            <p class="main main--about-me main--about-me-p">
+                Tengo más que claro que mi condición de estudiante de historia llamará algo la atención. Entré a esta
+                carrera con la convicción de que el estudio de la historia es crucial para nuestro futuro. Y hoy esa
+                convicción sigue más firme que nunca. El tiempo que llevo programando me ha demostrado la infinidad de
+                posibilidades que aún están abiertas para la Historia. Existen herramientas que han sido poco o nada ocupadas
+                en la disciplina. Creo que existe gran un potencial en la intersección entre Historia e Informática; desde
+                el uso de los métodos estadísticos computacionales más tradicionales para comprender la gran cantidad de
+                datos que tenemos sobre el pasado, hasta el uso de inteligencia artificial y NLP para procesar los inmensos
+                volúmenes de documentos tanto históricos como historiográficos que esperan ser descubiertos en las
+                profundidades de los archivos.
+            </p>
+            <p class="main main--about-me main--about-me-p">
+                Actualmente mis intereses son el desarrollo web (específicamente backend por ahora), el procesamiento de
+                imágenes (principalmente en documentos escaneados), y lo que hoy se conoce como ciencia de datos. He
+                avanzado paulatinamente en estos ámbitos a lo largo del tiempo que llevo programando. Si bien parecen
+                ámbitos dispersos, persigo estas tres áreas porque considero que me permiten estar cada día más cerca de
+                la visión que tengo sobre nuevas formas de estudiar y comprender la historia en el futuro.
+            </p>
+        </div>
+        <div class="main main--projects">
+            <h1 class="main main--projects main--projects-title">Proyectos: </h1>
+            {% for project in projects %}
+                <div class="main main--projects main--projects-project">
                     <a href="{{ project.url }}">{{ project.name }}</a>
+                    <p class="main main--projects main--projects-proyect-description">{{ project.description }}</p>
                 </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
+        </div>
     </main>
 </body>
 </html>

@@ -1,8 +1,9 @@
 * {
-    font-family: 'Quattrocento Sans', sans-serif;
     margin: 0 auto;
+    font-family: 'Work Sans', sans-serif;
     color: white;
     background-color: rgba(109,113,120, 0.2);
+    text-decoration: none;
 }
 
 .header-container {
@@ -15,31 +16,135 @@
     bottom: 0;
 }
 
+
 .header--name-container {
+    width: 45%;
     position: fixed;
     left: 10px;
-    top: 82%;
+    top: 60%;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
+    display: inline-block;
 }
 
+.header-pic {
+    display: block;
+    position: center;
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+}
+
+.header--nav {
+    background-color: transparent;
+}
 .header--name {
     font-size: 50px;
-    font-family: 'Space Mono', monospace;
+    display: inline-block;
     padding-left: 20px;
+    font-family: 'Playfair Display', serif;
+    background: transparent;
+}
+
+.header--nav-link {
+    display: inline-block;
+    position: static;
+    background-color: rgba(109,113,120, 0.5);
+    text-align: center;
+    padding-top: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
+    letter-spacing: 3px;
+}
+
+.header--nav-link:hover {
+    background-color: rgba(109,113,120, 0.8);
 }
 
 .main {
     position: absolute;
-    left: 50%;
     width: 50%;
-    top: 100px;
+    top: 100%;
+    left: 50%;
 }
 
 .main--heading {
-    position: fixed;
+    position: absolute;
     text-align: center;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Playfair Display', serif;
     font-weight: lighter;
+    top: -25%;
+    left: 25%;
+}
+
+.main--about-me {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 75%;
+    background-color: transparent;
+}
+
+.main--about-me-h {
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    font-weight: lighter;
+    position: relative;
+    left: -25%;
+    padding: 20px;
+}
+
+.main--about-me-p {
+    width: auto;
+    position: relative;
+    font-weight: lighter;
+    background-color: rgba(109,113,120, 0.5);
+    padding: 25px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.main--projects {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+.main--projects-title {
+    position: relative;
+    left: 0;
+    font-family: 'Playfair Display', serif;
+    background: transparent;
+    padding: 20px;
+    font-weight: lighter;
+}
+
+.main--projects-project {
+    position: relative;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 0;
+    background-color: rgba(109,113,120, 0.2);
+    width: 50%;
+
+}
+
+.main--projects-project a:hover {
+    background-color: rgba(109,113,120, 0.5);
+
+}
+
+.fa-angle-down {
+    position: absolute;
+    top: 92%;
+    left: 95%;
+    z-index: 1;
+    background: transparent;
 }
